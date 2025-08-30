@@ -8,7 +8,7 @@ public class PromptFunction
 
   public static async Task Execute()
   {
-    var modelDeploymentName = "Gpt4v32k";
+    var modelDeploymentName = "gpt-4o";
     var azureOpenAIEndpoint = Environment.GetEnvironmentVariable("AZUREOPENAI_ENDPOINT");
     var azureOpenAIApiKey = Environment.GetEnvironmentVariable("AZUREOPENAI_APIKEY");
 
