@@ -6,7 +6,7 @@ public class HandlebarsChainingFunctions
 {
   public static async Task Execute()
   {
-    var modelDeploymentName = "Gpt4v32k";
+    var modelDeploymentName = "gpt-4o";
     var azureOpenAIEndpoint = Environment.GetEnvironmentVariable("AZUREOPENAI_ENDPOINT");
     var azureOpenAIApiKey = Environment.GetEnvironmentVariable("AZUREOPENAI_APIKEY");
 
@@ -15,7 +15,7 @@ public class HandlebarsChainingFunctions
         modelDeploymentName,
         azureOpenAIEndpoint,
         azureOpenAIApiKey,
-        modelId: "gpt-4-32k"
+        modelId: "gpt-4o"
     );
     var kernel = builder.Build();
 

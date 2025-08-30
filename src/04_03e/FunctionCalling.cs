@@ -10,7 +10,7 @@ public class FunctionCalling
 {
   public static async Task Execute()
   {
-    var modelDeploymentName = "Gpt4v32k";
+    var modelDeploymentName = "gpt-4o";
     var azureOpenAIEndpoint = Environment.GetEnvironmentVariable("AZUREOPENAI_ENDPOINT");
     var azureOpenAIApiKey = Environment.GetEnvironmentVariable("AZUREOPENAI_APIKEY");
 
@@ -19,7 +19,7 @@ public class FunctionCalling
         modelDeploymentName,
         azureOpenAIEndpoint,
         azureOpenAIApiKey,
-        modelId: "gpt-4-32k"
+        modelId: "gpt-40"
     );
     var kernel = builder.Build();
 
@@ -38,7 +38,7 @@ public class FunctionCalling
     KernelPlugin roleOpinionsPlugin =
         KernelPluginFactory.CreateFromFunctions(
             "RoleTalk",
-            "Responds to questions or statements asuming different roles.",
+            "Responds to questions or statements assuming different roles.",
             new[] {
                     kernelFunctionRespondAsScientific,
                     kernelFunctionRespondAsPoliceman

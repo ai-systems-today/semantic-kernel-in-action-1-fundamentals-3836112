@@ -7,7 +7,7 @@ public class HandlebarsPlannerPractice
 {
     public static async Task Execute()
     {
-        var modelDeploymentName = "Gpt4v32k";
+        var modelDeploymentName = "gpt-4o";
         var azureOpenAIEndpoint = Environment.GetEnvironmentVariable("AZUREOPENAI_ENDPOINT");
         var azureOpenAIApiKey = Environment.GetEnvironmentVariable("AZUREOPENAI_APIKEY");
 
@@ -16,7 +16,7 @@ public class HandlebarsPlannerPractice
             modelDeploymentName,
             azureOpenAIEndpoint,
             azureOpenAIApiKey,
-            modelId: "gpt-4-32k"
+            modelId: "gpt-4o"
         );
         var kernel = builder.Build();
 
@@ -53,7 +53,7 @@ public class HandlebarsPlannerPractice
         KernelPlugin roleOpinionsPlugin =
             KernelPluginFactory.CreateFromFunctions(
                 "roleTalk",
-                "Responds to questions or statements asuming different roles.",
+                "Responds to questions or statements assuming different roles.",
                 new[] {
                     kernelFunctionRespondAsScientific,
                     kernelFunctionRespondAsPoliceman
